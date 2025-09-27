@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    /* Core Colors */
+    --background: 210 40% 96.1%; /* hsl(210, 40%, 96.1%) */
+    --foreground: 222.2 47.4% 11.2%; /* hsl(222.2, 47.4%, 11.2%) */
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --muted: 210 40% 92.1%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --border: 214.3 31.8% 91.4%;
+    --ring: 222.2 47.4% 11.2%;
+    --card: 210 40% 98%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 210 40% 98%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 40% 92.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: 174 76% 42%; /* hsl(174, 76%, 42%) */
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --input: 214.3 31.8% 91.4%;
+    --chart-1: 174 76% 42%;
+    --chart-2: 174 66% 52%;
+    --chart-3: 174 56% 62%;
+    --chart-4: 174 46% 72%;
+    --chart-5: 174 36% 82%;
+    --radius: 0.75rem;
+  }
+  .dark {
+    --background: 222.2 47.4% 11.2%; /* hsl(222.2, 47.4%, 11.2%) */
+    --foreground: 210 40% 96.1%; /* hsl(210, 40%, 96.1%) */
+    --primary: 210 40% 96.1%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --muted: 222.2 47.4% 16.2%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --border: 222.2 47.4% 21.2%;
+    --ring: 174 76% 42%;
+    --card: 222.2 47.4% 14.2%;
+    --card-foreground: 210 40% 96.1%;
+    --popover: 222.2 47.4% 11.2%;
+    --popover-foreground: 210 40% 96.1%;
+    --secondary: 222.2 47.4% 16.2%;
+    --secondary-foreground: 210 40% 96.1%;
+    --accent: 174 76% 42%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --input: 222.2 47.4% 21.2%;
+    --chart-1: 174 76% 42%;
+    --chart-2: 174 66% 32%;
+    --chart-3: 174 56% 22%;
+    --chart-4: 174 46% 12%;
+    --chart-5: 174 36% 5%;
+  }
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    text-rendering: optimizeLegibility;
+  }
+}
+@layer components {
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border;
+  }
+  .recharts-default-tooltip {
+    @apply bg-background/80 backdrop-blur-sm border !important;
+  }
+  .recharts-tooltip-label {
+    @apply text-foreground font-bold !important;
+  }
+  .recharts-tooltip-item {
+    @apply text-foreground !important;
+  }
+}
